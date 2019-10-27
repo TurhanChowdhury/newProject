@@ -1,0 +1,12 @@
+isnumber(0)
+isnumber(s(X)):isnumber(X)
+isequal(X,Y):-isnumber(X)
+isequal(s(X),s(Y)):-isequal(X,Y)
+lessthanequal(0,X):-isnumber(X)
+lessthanequal(s(X),s(Y)):-lessthanequal(X,Y)
+
+even(0)
+even(s(s(X))):-even(X)
+
+add(s(0),s(s(0)),s(s(s(0))))
+add(s(X),s(Y),s(s(Z))):-add(X,Y,Z).
